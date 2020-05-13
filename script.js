@@ -1,1 +1,3 @@
-console.log("hola")
+function botonMenu(x) {
+    x.classList.toggle("change");
+  }
