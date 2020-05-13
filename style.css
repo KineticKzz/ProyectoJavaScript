@@ -1,4 +1,18 @@
 body{
     margin: 0px;
     background-color: aliceblue;
+    flex-direction: column;
 }
+#contenedor1 {
+    display: flex;
+    flex-direction: row;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+  }
