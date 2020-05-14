@@ -5,6 +5,10 @@ body{
     color: #DBDBFA;
     min-height: 100vh;
 }
+#cuerpo{
+    transition: margin-left .5s;
+    
+}
 #contenedor1 {
     display: flex;
     flex-direction: row;
@@ -20,7 +24,6 @@ body{
     text-align: center;
     border-top: solid 1px #DBDBFA;
 }
-
 #cabecera{
     min-height: 100px;
     font-size: 27px;
@@ -30,40 +33,68 @@ h1{
     position: relative;
     left: 200px;
 }
-#menu-lateral{
-    display: flex;
-    flex-direction: column;
-    width: 5%;
-    background-color: #090933;
-    min-width: 100px;
-    color: #DBDBFA;
+
+.menu-lateral {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0; /*empieza desde la izquierda*/
+  background-color: #111;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the menu-lateral */
 }
-#menu-lateral span{
-    margin: 20px 0px 0px 25px;
+/* The navigation menu links */
+.menu-lateral a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
-#menu-lateral span:hover{
-    cursor: pointer;
+
+/* When you mouse over the navigation links, change their color */
+.menu-lateral a:hover {
+  color: #f1f1f1;
+  cursor: pointer;
 }
+
+/* Position and style the close button (top right corner) */
+.menu-lateral .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
 #contenido-principal{
-    width: 95%;
     background-color: #DBDBFA;
     padding-left: 40px;
+    margin-left: 30px;
     border: solid 1px #090933;
     border-radius: 5px;
+    color: #090933;
+    padding-bottom: 30px;
 }
 
 
 /*boton para abrir el menú lateral*/
-.botonMenu {
-    position: absolute;
+.botonMenu, #botonMenu {
+    display: block;
+    position: relative;
     top: 11px;
     left: 13px;
     cursor: pointer;
 }
 .botonMenuAux{
-    position: absolute;
+    position: relative;
     top: 35px;
-    left: 70px;
+    left: -200px;
     height: 60px;
     width: 60px;
 }
@@ -81,15 +112,34 @@ h1{
     margin: 6px 0;
     transition: 0.5s;
 }
-/*giramos la barra 1 para que hagan forma de cruz*/
-.change .bar1 {
-    -webkit-transform: rotate(-42.5deg) translate(-9px, 6px);
-    transform: rotate(-42.5deg) translate(-9px, 6px);
+table{
+    width: 100%;
 }
-/*ocultamos la barra del medio*/
-.change .bar2 {opacity: 0;}
-/*giramos la barra 2 para que hagan forma de cruz*/
-.change .bar3 {
-    -webkit-transform: rotate(42.5deg) translate(-8px, -8px);
-    transform: rotate(42.5deg) translate(-8px, -8px);
+h2{
+    font-size: 35px;
+}
+th, td, tr{
+    width: 20%;
+    height: 35px;
+    text-align: left;
+    font-size: 20px;
+}
+th{
+    font-size: 25px;
+}
+
+#alumnos{
+    display: block;
+}
+#empresa{
+    display: none;
+}
+#profesores{
+    display: none;
+}
+#asignaciones{
+    display: none;
+}
+#actividades{
+    display: none;
 }

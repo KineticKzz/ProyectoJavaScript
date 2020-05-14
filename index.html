@@ -8,27 +8,74 @@
     <title>Ficha de Trabajo Semanal</title>
     <script src="javascript/script.js"></script>
 </head>
-<body>
+<body id="cuerpo">
     <div id="cabecera">
-        <h1>Lista</h1>
-        <div class="botonMenuAux">
-            <div class="botonMenu" onclick="botonMenu(this)">
+        <h1>LISTA FCT</h1>
+        <div class="botonMenuAux" id="botonMenuAux">
+            <div class="botonMenu" id="botonMenu" onclick="abrirMenu()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
         </div>
     </div>
-    <div id="contenedor1">
-        <div id="menu-lateral">
-            <span class="fa fa-graduation-cap" style="font-size: 30px;"></span>
-            <span class="fa fa-briefcase" style="font-size: 30px;"></span>
-            <span class="fa fa-user" style="font-size: 30px;"></span>
-            <span class="fa fa-tags" style="font-size: 30px;"></span>
-            <span class="fa fa-calendar" style="font-size: 30px;"></span>
-        </div>
+    <div id="menu-lateral" class="menu-lateral">
+        <a href="javascript:void(0)" class="closebtn" onclick="cerrarMenu()">&times;</a>
+        <a onclick="abrirAlumnos()">Alumnos</a>
+        <a onclick="abrirEmpresa()">Empresa</a>
+        <a onclick="abrirProfesores()">Profesores</a>
+        <a onclick="abrirAsignaciones()">Asignaciones</a>
+        <a onclick="abrirActividades()">Actividades</a>
+      </div>      
         <div id="contenido-principal">
-            <h2>hola soy el contenido principal</h2>
+            <div id="alumnos" class="tabcontent">
+                <h2>ALUMNOS</h2>
+                <p>Aqui aparecen los alumnos que están efectuando las prácticas en empresas (FTC)</p>
+                <table>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Apellidos</th>
+                      <th>Curso</th>
+                      <th>Ciclo</th>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>1º</td>
+                      <td>ASIR</td>
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>1º</td>
+                      <td>ASIR</td>
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>2º</td>
+                      <td>ASIR</td>
+                    </tr>
+                  </table>
+              </div>
+              
+              <div id="empresa" class="tabcontent">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p>
+              </div>
+              <div id="profesores" class="tabcontent">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+              <div id="asignaciones" class="tabcontent">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+              </div>
+              
+              <div id="actividades" class="tabcontent">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p>
+              </div>
         </div>
     </div>
     <div class="footer">
