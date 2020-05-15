@@ -6,13 +6,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Ficha de Trabajo Semanal</title>
-    <script src="javascript/script.js"></script>
 </head>
 <body id="cuerpo">
     <div id="cabecera">
         <h1>LISTA FCT</h1>
-        <div class="botonMenuAux" id="botonMenuAux">
-            <div class="botonMenu" id="botonMenu" onclick="abrirMenu()">
+        <div class="botonMenuAux" id="botonMenuAux" onclick="abrirMenu()">
+            <div class="botonMenu" id="botonMenu">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -21,7 +20,7 @@
     </div>
     <div id="menu-lateral" class="menu-lateral">
         <a href="javascript:void(0)" class="closebtn" onclick="cerrarMenu()">&times;</a>
-        <a onclick="abrirAlumnos()">Alumnos</a>
+        <a onclick="abrirAlumnos()"><span class="fa fa-graduation-cap"></span>Alumnos</a>
         <a onclick="abrirEmpresa()">Empresa</a>
         <a onclick="abrirProfesores()">Profesores</a>
         <a onclick="abrirAsignaciones()">Asignaciones</a>
@@ -39,47 +38,124 @@
                       <th>Ciclo</th>
                     </tr>
                     <tr>
-                      <td>Jill</td>
-                      <td>Smith</td>
+                      <td>Sergio</td>
+                      <td>Fernandez Martinez</td>
                       <td>1º</td>
                       <td>ASIR</td>
                     </tr>
                     <tr>
-                      <td>Eve</td>
-                      <td>Jackson</td>
-                      <td>1º</td>
+                      <td>Pepe</td>
+                      <td>Hidalgo Martinez</td>
+                      <td>2º</td>
                       <td>ASIR</td>
                     </tr>
                     <tr>
-                      <td>Adam</td>
-                      <td>Johnson</td>
+                      <td>Cristian</td>
+                      <td>Callejas Fuentes</td>
                       <td>2º</td>
                       <td>ASIR</td>
                     </tr>
                   </table>
               </div>
-              
               <div id="empresa" class="tabcontent">
-                <h3>Paris</h3>
-                <p>Paris is the capital of France.</p>
+                <h3>EMPRESAS</h3>
+                <p>Aqui apareceran las empresas en las que se estan efectuando las practicas.</p>
               </div>
               <div id="profesores" class="tabcontent">
-                <h3>Tokyo</h3>
-                <p>Tokyo is the capital of Japan.</p>
+                <h3>PROFESORES</h3>
+                <p>Aqui apareceran los tutores docentes asignados a las prácticas en empresa</p>
               </div>
               <div id="asignaciones" class="tabcontent">
-                <h3>London</h3>
-                <p>London is the capital city of England.</p>
+                <h3>ASIGNACIONES</h3>
+                <p>Aqui aparecerá lo que se le asigna a cada alumno de las FCT.</p>
               </div>
-              
               <div id="actividades" class="tabcontent">
-                <h3>Paris</h3>
-                <p>Paris is the capital of France.</p>
+                <h3>ACTIVIDADES</h3>
+                <p>Aqui aparecerá la actividad de cada uno de los alumnos.</p>
               </div>
         </div>
+    </div>
+    <!-- boton desplegable -->
+    <div class="botonAux">
+      <div class="dropdown">
+        <div class="dropdown-content">
+          <!-- contenido del desplegable -->
+          <a href="#">Estudiante</a>
+          <a href="#">Empresa</a>
+          <a href="#">Profesor</a>
+          <a href="#">Asignaciones</a>
+          <a href="#" onclick="AñadirActividad()">Actividades</a>
+        </div>
+        <span class="btn" id="btn" style="border-left:1px solid navy">
+          <i class="fa fa-caret-down"></i><b>AÑADIR</b>
+        </span>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" id="cerrarModal" onclick="CerrarModal()">&times;</span>
+        <h3>Añadir una actividad</h3>
+        <form action="">
+          <table id="tablaActividadesCabecera">
+            <tr>
+              <td>Semana del <input  type="text" id="dia1Actividades"> al <input type="text" id="dia2Actividades"> de <input id="mesActividades" type="text"> del año <input type="text" id="añoActividades"></td>
+            </tr>
+            <tr>
+              <td>CENTRO DOCENTE <input type="text" id="centroDocenteActividades"><br>PROFESOR/A RESPONSABLE <input type="text" id="profesorActividades"></td>
+              <td>CENTRO DE TRABAJO <input type="text" id="centroTrabajoActividades"><br>TUTOR/A DEL CENTRO DE TRABAJO <input type="text" id="tutorEmpresaActividades"></td>
+            </tr>
+            <tr>
+              <td>ALUMNO/A <input type="text" id="alumnoActividades"></td>
+              <td>CICLO FORMATIVO <input type="text" id="cicloFormativoActividades"> GRADO <select name="grado" id="gradoActividades"><option value="
+                gradoSuperiorActividades">S</option><option value="gradoMedioActividades">M</option></select></td>
+            </tr>
+          </table>
+          <table id="tablaActividadesCuerpo">
+            <tr>
+              <td class="tdCabeceraActividadesCuerpo">DIA</td>
+              <td>ACTIVIDAD DESARROLLADA/PUESTO FORMATIVO</td>
+              <td class="tdCabeceraActividadesCuerpo">TIEMPO EMPLEADO</td>
+              <td>OBSERVACIONES</td>
+            </tr>
+            <tr>
+              <td>LUNES</td>
+              <td><input type="text" id="actividadesRealizadasLunes"></td>
+              <td><input type="text" id="tiempoEmpleadoLunes"></td>
+              <td><input type="text" id="observacionesLunes"></td>
+            </tr>
+            <tr>
+              <td>MARTES</td>
+              <td><input type="text" id="actividadesRealizadasMartes"></td>
+              <td><input type="text" id="tiempoEmpleadoMartes"></td>
+              <td><input type="text" id="observacionesMartes"></td>
+            </tr>
+            <tr>
+              <td>MIERCOLES</td>
+              <td><input type="text" id="actividadesRealizadasMiercoles"></td>
+              <td><input type="text" id="tiempoEmpleadoMiercoles"></td>
+              <td><input type="text" id="observacionesMiercoles"></td>
+            </tr>
+            <tr>
+              <td>JUEVES</td>
+              <td><input type="text" id="actividadesRealizadasJueves"></td>
+              <td><input type="text" id="tiempoEmpleadoJueves"></td>
+              <td><input type="text" id="observacionesJueves"></td>
+            </tr>
+            <tr>
+              <td>VIERNES</td>
+              <td><input type="text" id="actividadesRealizadasViernes"></td>
+              <td><input type="text" id="tiempoEmpleadoViernes"></td>
+              <td><input type="text" id="observacionesViernes"></td>
+            </tr>
+          </table>
+          <button onclick="enviarActividades()">ENVIAR</button>
+        </form>
+      </div>
     </div>
     <div class="footer">
         <p>hola soy el pie de pagina</p>
     </div>      
+    <script src="javascript/script.js"></script>
 </body>
 </html>

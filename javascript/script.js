@@ -53,11 +53,6 @@ function Actividades(dia, actividades, horas){
   this.horas = horas;
 }
 
-function añadir(){
-  var alumno1 = new Alumno("Pepe", "Jmenez Sanchez", "1º", "ASIR");
-  var alumno2 = new Alumno("Federico", "Martinez Gonzalez", "1º", "ASIR");
-  var alumno2 = new Alumno("Arturo", "Vidal Reina", "2º", "ASIR");
-}
 
 function abrirAlumnos(){
   document.getElementById("alumnos").style.display= "block";
@@ -94,3 +89,53 @@ function abrirActividades(){
   document.getElementById("asignaciones").style.display= "none";
   document.getElementById("actividades").style.display= "block";
 }
+
+function AñadirActividad(){
+  document.getElementById("myModal").style.display = "block";
+}
+function enviarActividades(){
+  var dia1 = document.getElementById("dia1Actividades").value;
+  var dia2 = document.getElementById("dia2Actividades").value;
+  var mes = document.getElementById("mesActividades").value;
+  var año = document.getElementById("añoActividades").value;
+  var comprobacion = ComprobarDia(dia1,mes,año);
+  var dias = dia2 - dia1;
+  if ( comprobacion != "lun" || dias != 7) {
+    alert("El primer dia introducido no empieza por Lunes o no has puesto 7 dias en la semana");
+  }
+}
+
+
+/* VARIABLES PARA EL DIALOGO MODAL */
+/* VARIABLES PARA EL DIALOGO MODAL */
+/* VARIABLES PARA EL DIALOGO MODAL */
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("AñadirActividad");
+var span = document.getElementsByClassName("close")[0];
+// cuando se clickea en la "x" se cierra el dialogo modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// cuando se clickea en la ventana fuera del modal, se cierra el dialogo modal
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function ComprobarDia(dia1,mes,año){
+  var dias = ["dom","lun","mar","mie","jue","vie","sab"];
+  var dt = new Date(mes+' '+dia1+', '+año+' 12:00:00');
+  return(dias[dt.getDay()]);    
+}
+
+
+
+/* CRECION OBJETOS ALUMNO */
+/* CRECION OBJETOS ALUMNO */
+/* CRECION OBJETOS ALUMNO */
+var Alumno01 = new Alumno ("Sergio", "Fernandez Martinez", "2º", "ASIR");
+var Alumno92 = new Alumno ("Pepe", "Hidalgo Martinez", "2º", "ASIR");
+var Alumno03 = new Alumno ("Cristian", "Callejas Fuentes", "2º", "ASIR");
+
+console.log(Alumno01)
