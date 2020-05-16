@@ -21,16 +21,16 @@
     <div id="menu-lateral" class="menu-lateral">
         <a href="javascript:void(0)" class="closebtn" onclick="cerrarMenu()">&times;</a>
         <a onclick="abrirAlumnos()"><span class="fa fa-graduation-cap"></span>Alumnos</a>
-        <a onclick="abrirEmpresa()">Empresa</a>
-        <a onclick="abrirProfesores()">Profesores</a>
-        <a onclick="abrirAsignaciones()">Asignaciones</a>
-        <a onclick="abrirActividades()">Actividades</a>
+        <a onclick="abrirEmpresa()"><span class="fa fa-briefcase" style="font-size: 30px;"></span>Empresa</a>
+        <a onclick="abrirProfesores()"><span class="fa fa-user" style="font-size: 30px;"></span>Profesores</a>
+        <a onclick="abrirAsignacion()"><span class="fa fa-tags" style="font-size: 30px;"></span>Asignaciones</a>
+        <a onclick="abrirActividades()"><span class="fa fa-calendar" style="font-size: 30px;"></span>Actividades</a>
       </div>      
         <div id="contenido-principal">
             <div id="alumnos" class="tabcontent">
                 <h2>ALUMNOS</h2>
                 <p>Aqui aparecen los alumnos que están efectuando las prácticas en empresas (FTC)</p>
-                <table>
+                <table id="tablaEstudiante">
                     <tr>
                       <th>Nombre</th>
                       <th>Apellidos</th>
@@ -58,19 +58,37 @@
                   </table>
               </div>
               <div id="empresa" class="tabcontent">
-                <h3>EMPRESAS</h3>
+                <h2>EMPRESAS</h2>
                 <p>Aqui apareceran las empresas en las que se estan efectuando las practicas.</p>
               </div>
               <div id="profesores" class="tabcontent">
-                <h3>PROFESORES</h3>
+                <h2>PROFESORES</h2>
                 <p>Aqui apareceran los tutores docentes asignados a las prácticas en empresa</p>
+                <table id="tablaProfesor">
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                  </tr>
+                  <tr>
+                    <td>Guillermo</td>
+                    <td>Salas Collado</td>
+                  </tr>
+                  <tr>
+                    <td>Maria</td>
+                    <td>Benitez Martinez</td>
+                  </tr>
+                  <tr>
+                    <td>Alberto</td>
+                    <td>Garcia Mejias</td>
+                  </tr>
+                </table>
               </div>
-              <div id="asignaciones" class="tabcontent">
-                <h3>ASIGNACIONES</h3>
+              <div id="asignacion" class="tabcontent">
+                <h2>ASIGNACIONES</h2>
                 <p>Aqui aparecerá lo que se le asigna a cada alumno de las FCT.</p>
               </div>
               <div id="actividades" class="tabcontent">
-                <h3>ACTIVIDADES</h3>
+                <h2>ACTIVIDADES</h2>
                 <p>Aqui aparecerá la actividad de cada uno de los alumnos.</p>
               </div>
         </div>
@@ -80,10 +98,10 @@
       <div class="dropdown">
         <div class="dropdown-content">
           <!-- contenido del desplegable -->
-          <a href="#">Estudiante</a>
-          <a href="#">Empresa</a>
-          <a href="#">Profesor</a>
-          <a href="#">Asignaciones</a>
+          <a href="#" onclick="AñadirEstudiante()">Estudiante</a>
+          <a href="#" onclick="AñadirEmpresa()">Empresa</a>
+          <a href="#" onclick="AñadirProfesor()">Profesor</a>
+          <a href="#" onclick="AñadirAsignacion()">Asignacion</a>
           <a href="#" onclick="AñadirActividad()">Actividades</a>
         </div>
         <span class="btn" id="btn" style="border-left:1px solid navy">
@@ -91,10 +109,59 @@
         </span>
       </div>
     </div>
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
+    <!-- CONTENIDO MODAL ESTUDIANTES -->
+    <!-- CONTENIDO MODAL ESTUDIANTES -->
+    <div id="modalEstudiante" class="modal">
       <div class="modal-content">
-        <span class="close" id="cerrarModal" onclick="CerrarModal()">&times;</span>
+        <span class="close" onclick="CerrarModalEstudiante()">&times;</span>
+        <h3>Añadir a un estudiante</h3>
+        <form action="">
+          <div>
+            <label for="nombreEstudiante">Nombre: <input type="text" id="nombreEstudiante"></label>
+            <label for="apellidosEstudiante">Apellidos: <input type="text" id="apellidosEstudiante"></label>
+            <label for="cursoEstudiante">Curso: <input type="text" id="cursoEstudiante" value="2º"></label>
+            <label for="cicloEstudiante">Ciclo: <input type="text" id="cicloEstudiante"></label>
+          </div>
+          <button onclick="enviarEstudiante()">ENVIAR</button>
+        </form>
+      </div>
+    </div>
+    <!-- CONTENIDO MODAL EMPRESA -->
+    <!-- CONTENIDO MODAL EMPRESA -->
+    <div id="modalEmpresa" class="modal">
+      <div class="modal-content">
+        <span class="close" id="cerrarModal" onclick="CerrarModalEmpresa()">&times;</span>
+        <h3>Añadir a una empresa</h3>
+      </div>
+    </div>
+    <!-- CONTENIDO MODAL PROFESORES -->
+    <!-- CONTENIDO MODAL PROFESORES -->
+    <div id="modalProfesor" class="modal">
+      <div class="modal-content">
+        <span class="close" id="cerrarModal" onclick="CerrarModalProfesor()">&times;</span>
+        <h3>Añadir a un profesor</h3>
+        <form action="">
+          <div>
+            <label for="nombreProfesor">Nombre: <input type="text" id="nombreProfesor"></label>
+            <label for="apellidosProfesor">Apellidos: <input type="text" id="apellidosProfesor"></label>
+          </div>
+          <button onclick="enviarProfesor()">ENVIAR</button>
+        </form>
+      </div>
+    </div>
+    <!-- CONTENIDO MODAL ASIGNACIONES -->
+    <!-- CONTENIDO MODAL ASIGNACIONES -->
+    <div id="modalAsignacion" class="modal">
+      <div class="modal-content">
+        <span class="close" id="cerrarModal" onclick="CerrarModalAsignacion()">&times;</span>
+        <h3>Añadir una asignacion</h3>
+      </div>
+    </div>
+    <!-- CONTENIDO MODAL ACTIVIDADES -->
+    <!-- CONTENIDO MODAL ACTIVIDADES -->
+    <div id="modalActividades" class="modal">
+      <div class="modal-content">
+        <span class="close" id="cerrarModal" onclick="CerrarModalActividades()">&times;</span>
         <h3>Añadir una actividad</h3>
         <form action="">
           <table id="tablaActividadesCabecera">

@@ -70,7 +70,10 @@ h1{
   font-size: 36px;
   margin-left: 50px;
 }
-
+#menu-lateral span{
+    height: 40px;
+    width: 40px;
+}
 
 #contenido-principal{
     background-color: #DBDBFA;
@@ -141,7 +144,7 @@ h1{
 #profesores{
     display: none;
 }
-#asignaciones{
+#asignacion{
     display: none;
 }
 #actividades{
@@ -209,8 +212,7 @@ h1{
 /* The Modal (background) */
 /* The Modal (background) */
 /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
+#modalEstudiante, #modalEmpresa, #modalProfesor, #modalAsignacion, #modalActividades{
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -221,7 +223,22 @@ h1{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
-  
+#modalEstudiante{
+    display: none;
+}
+#modalEmpresa{
+    display: none;
+}
+#modalProfesor{
+    display: none;
+}
+#modalAsignacion{
+    display: none;
+}
+#modalActividades{
+    display: none;
+}
+
 /* Modal Content/Box */
 .modal-content {
     background-color: #DBDBFA;
@@ -275,7 +292,7 @@ h1{
     border: none;
     background-color: rgba(188, 222, 226, 0.842);
 }
-form{
+#modalActividades form {
    text-align: center; 
 }
 form button{
@@ -291,4 +308,19 @@ form button:hover{
     cursor: pointer;
     background-color: #2E2EE3;
     color: #DBDBFA;
+}
+#modalEstudiante h3{
+    font-size: 25px;
+}
+#modalEstudiante form{
+    font-size: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+#modalEstudiante form input, #modalProfesor form input{
+    background-color: #090933;
+    border-radius: 5px;
+    height: 20px;
+    color: #DBDBFA;
+    margin-bottom: 30px;
 }
