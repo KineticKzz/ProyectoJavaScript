@@ -25,8 +25,8 @@ body{
     border-top: solid 1px #DBDBFA;
 }
 #cabecera{
-    min-height: 100px;
-    font-size: 27px;
+    min-height: 70px;
+    font-size: 25px;
     display: flex;
 }
 h1{
@@ -78,11 +78,13 @@ h1{
 #contenido-principal{
     background-color: #DBDBFA;
     padding-left: 40px;
-    margin-left: 30px;
+    margin: 30px;
     border: solid 1px #090933;
     border-radius: 5px;
     color: #090933;
+    padding-top: 30px;
     padding-bottom: 30px;
+    margin-bottom: 150px;
 }
 
 
@@ -168,7 +170,7 @@ h1{
 .dropdown-content {
   display: none;
   position: absolute;
-  top: -226px;
+  top: -184px;
   left: 1px;
   background-color: #DBDBFA;
   min-width: 162px;
@@ -201,13 +203,16 @@ h1{
     padding-left: 10px;
 }
 .botonAux{
+    position: fixed;
     margin: auto;
     width: 200px;
     position: absolute;
     bottom: 100px;
     left: 5%;
 }
-
+#botonAux{
+    display: flex;
+}
 
 /* The Modal (background) */
 /* The Modal (background) */
@@ -264,11 +269,14 @@ h1{
     cursor: pointer;
 }
 
-#tablaActividadesCabecera, #tablaActividadesCuerpo{
+#actividades #tablaActividadesCabecera, #actividades #tablaActividadesCuerpo{
     border: 1px solid #090933;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    
+    width: 90%;
+    margin: auto;
+}
+.actividades #tablaActividadesCabecera{
+    margin-bottom: 30px;
 }
 #tablaActividadesCabecera td, #tablaActividadesCuerpo td{
     border: solid 1px #090933;
@@ -278,15 +286,19 @@ h1{
 }
 #tablaActividadesCuerpo td{
     text-align: center;
-    height: 80px;
+    height: 70px;
 }
-.tdCabeceraActividadesCuerpo{
+#tablaActividadesCuerpo .tdCabeceraActividadesCuerpo{
     width: 7%;
 }
 #tablaActividadesCuerpo input{
     width: 90%;
     height: 90%;
     text-align: center;
+    padding-left: 10px;
+}
+#alumnoActividades, #tutorEmpresaActividades, #profesorActividades, #centroDocenteActividades, #centroTrabajoActividades{
+    width: 60%;
 }
 #tablaActividadesCuerpo input, #tablaActividadesCabecera input{
     border: none;
@@ -295,7 +307,7 @@ h1{
 #modalActividades form {
    text-align: center; 
 }
-form button{
+#actividades form button{
     width: 200px;
     height: 60px;
     background-color: #090933;
@@ -303,13 +315,14 @@ form button{
     border-radius: 10px;
     font-size: 18px;
     font-weight: 200;
+    margin-top: 20px;
 }
 form button:hover{
     cursor: pointer;
     background-color: #2E2EE3;
     color: #DBDBFA;
 }
-#modalEstudiante h3{
+#actividades h3{
     font-size: 25px;
 }
 #modalEstudiante form{
@@ -323,4 +336,95 @@ form button:hover{
     height: 20px;
     color: #DBDBFA;
     margin-bottom: 30px;
+    padding-left: 10px;
+}
+#modalEstudiante button{
+    width: 500px;
+    height: 50px;
+    background-color: #090933;
+    color: #DBDBFA;
+    border-radius: 10px;
+}
+#modalEstudiante button:hover{
+    cursor: pointer;
+    background-color: #2E2EE3;
+    color: #DBDBFA;
+}
+form #tablaActividadesCabecera span{
+    width: 50px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 5px;
+    border: 1px solid #090933;
+    background-color: #090933;
+    color: #DBDBFA;
+    border-radius: 10px;
+}
+
+form #tablaActividadesCabecera span:hover{
+    cursor: pointer;
+}
+#modalEmpresa form{
+    flex-direction: column;
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+#modalEmpresa form #divEmpresa3, #modalEmpresa form #divEmpresa4{
+    display: flex;
+}
+#modalEmpresa form #divEmpresa4{
+    text-align: center;
+    flex-direction: row;
+}
+#modalEmpresa form #divEmpresa1, #modalEmpresa form #divEmpresa2{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+#modalEmpresa label{
+    display: flex;
+    flex-direction: column;
+}
+#modalEmpresa input{
+    height: 30px;
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #DBDBFA;
+    background-color: #090933;
+    border-radius: 7px;
+    padding-left: 10px;
+}
+#divEmpresa3 {
+    width: 500px;
+    height: 50px;
+    margin: auto;
+}
+#divEmpresa3 button{
+    width: 100%;
+    height: 100%;
+    background-color: #090933;
+    color: #DBDBFA;
+    border-radius: 10px;
+}
+#divEmpresa3 button:hover{
+    cursor: pointer;
+    background-color: #2E2EE3;
+    color: #DBDBFA;
+}
+#divEmpresa4{
+    font-size: 20px;
+}
+#modalProfesor button{
+    width: 500px;
+    height: 50px;
+    background-color: #090933;
+    color: #DBDBFA;
+    border-radius: 10px;
+}
+#modalProfesor button:hover{
+    cursor: pointer;
+    background-color: #2E2EE3;
+    color: #DBDBFA;
 }

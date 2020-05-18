@@ -9,171 +9,147 @@
 </head>
 <body id="cuerpo">
     <div id="cabecera">
-        <h1>LISTA FCT</h1>
-        <div class="botonMenuAux" id="botonMenuAux" onclick="abrirMenu()">
-            <div class="botonMenu" id="botonMenu">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
+      <h1>LISTA FCT</h1>
+      <div class="botonMenuAux" id="botonMenuAux" onclick="abrirMenu()">
+        <div class="botonMenu" id="botonMenu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
         </div>
+      </div>
     </div>
     <div id="menu-lateral" class="menu-lateral">
-        <a href="javascript:void(0)" class="closebtn" onclick="cerrarMenu()">&times;</a>
-        <a onclick="abrirAlumnos()"><span class="fa fa-graduation-cap"></span>Alumnos</a>
-        <a onclick="abrirEmpresa()"><span class="fa fa-briefcase" style="font-size: 30px;"></span>Empresa</a>
-        <a onclick="abrirProfesores()"><span class="fa fa-user" style="font-size: 30px;"></span>Profesores</a>
-        <a onclick="abrirAsignacion()"><span class="fa fa-tags" style="font-size: 30px;"></span>Asignaciones</a>
-        <a onclick="abrirActividades()"><span class="fa fa-calendar" style="font-size: 30px;"></span>Actividades</a>
-      </div>      
-        <div id="contenido-principal">
-            <div id="alumnos" class="tabcontent">
-                <h2>ALUMNOS</h2>
-                <p>Aqui aparecen los alumnos que están efectuando las prácticas en empresas (FTC)</p>
-                <table id="tablaEstudiante">
-                    <tr>
-                      <th>Nombre</th>
-                      <th>Apellidos</th>
-                      <th>Curso</th>
-                      <th>Ciclo</th>
-                    </tr>
-                    <tr>
-                      <td>Sergio</td>
-                      <td>Fernandez Martinez</td>
-                      <td>1º</td>
-                      <td>ASIR</td>
-                    </tr>
-                    <tr>
-                      <td>Pepe</td>
-                      <td>Hidalgo Martinez</td>
-                      <td>2º</td>
-                      <td>ASIR</td>
-                    </tr>
-                    <tr>
-                      <td>Cristian</td>
-                      <td>Callejas Fuentes</td>
-                      <td>2º</td>
-                      <td>ASIR</td>
-                    </tr>
-                  </table>
-              </div>
-              <div id="empresa" class="tabcontent">
-                <h2>EMPRESAS</h2>
-                <p>Aqui apareceran las empresas en las que se estan efectuando las practicas.</p>
-              </div>
-              <div id="profesores" class="tabcontent">
-                <h2>PROFESORES</h2>
-                <p>Aqui apareceran los tutores docentes asignados a las prácticas en empresa</p>
-                <table id="tablaProfesor">
-                  <tr>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                  </tr>
-                  <tr>
-                    <td>Guillermo</td>
-                    <td>Salas Collado</td>
-                  </tr>
-                  <tr>
-                    <td>Maria</td>
-                    <td>Benitez Martinez</td>
-                  </tr>
-                  <tr>
-                    <td>Alberto</td>
-                    <td>Garcia Mejias</td>
-                  </tr>
-                </table>
-              </div>
-              <div id="asignacion" class="tabcontent">
-                <h2>ASIGNACIONES</h2>
-                <p>Aqui aparecerá lo que se le asigna a cada alumno de las FCT.</p>
-              </div>
-              <div id="actividades" class="tabcontent">
-                <h2>ACTIVIDADES</h2>
-                <p>Aqui aparecerá la actividad de cada uno de los alumnos.</p>
-              </div>
-        </div>
-    </div>
-    <!-- boton desplegable -->
-    <div class="botonAux">
-      <div class="dropdown">
-        <div class="dropdown-content">
-          <!-- contenido del desplegable -->
-          <a href="#" onclick="AñadirEstudiante()">Estudiante</a>
-          <a href="#" onclick="AñadirEmpresa()">Empresa</a>
-          <a href="#" onclick="AñadirProfesor()">Profesor</a>
-          <a href="#" onclick="AñadirAsignacion()">Asignacion</a>
-          <a href="#" onclick="AñadirActividad()">Actividades</a>
-        </div>
-        <span class="btn" id="btn" style="border-left:1px solid navy">
-          <i class="fa fa-caret-down"></i><b>AÑADIR</b>
-        </span>
+      <a href="javascript:void(0)" class="closebtn" onclick="cerrarMenu()">&times;</a>
+      <a onclick="abrirAlumnos()"><span class="fa fa-graduation-cap"></span>Alumnos</a>
+      <a onclick="abrirEmpresa()"><span class="fa fa-briefcase" style="font-size: 30px;"></span>Empresa</a>
+      <a onclick="abrirProfesores()"><span class="fa fa-user" style="font-size: 30px;"></span>Profesores</a>
+      <a onclick="abrirAsignacion()"><span class="fa fa-tags" style="font-size: 30px;"></span>Asignaciones</a>
+      <a onclick="abrirActividades()"><span class="fa fa-calendar" style="font-size: 30px;"></span>Actividades</a>
+    </div>      
+    <div id="contenido-principal">
+      <div id="alumnos" class="tabcontent">
+        <h2>ESTUDIANTES</h2>
+        <table id="tablaEstudiante">
+          <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Curso</th>
+            <th>Ciclo</th>
+          </tr>
+          <tr>
+            <td>Sergio</td>
+            <td>Fernandez Martinez</td>
+            <td>1º</td>
+            <td>ASIR</td>
+          </tr>
+          <tr>
+            <td>Pepe</td>
+            <td>Hidalgo Martinez</td>
+            <td>2º</td>
+            <td>ASIR</td>
+          </tr>
+          <tr>
+            <td>Cristian</td>
+            <td>Callejas Fuentes</td>
+            <td>2º</td>
+            <td>ASIR</td>
+          </tr>
+        </table>
       </div>
-    </div>
-    <!-- CONTENIDO MODAL ESTUDIANTES -->
-    <!-- CONTENIDO MODAL ESTUDIANTES -->
-    <div id="modalEstudiante" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="CerrarModalEstudiante()">&times;</span>
-        <h3>Añadir a un estudiante</h3>
-        <form action="">
-          <div>
-            <label for="nombreEstudiante">Nombre: <input type="text" id="nombreEstudiante"></label>
-            <label for="apellidosEstudiante">Apellidos: <input type="text" id="apellidosEstudiante"></label>
-            <label for="cursoEstudiante">Curso: <input type="text" id="cursoEstudiante" value="2º"></label>
-            <label for="cicloEstudiante">Ciclo: <input type="text" id="cicloEstudiante"></label>
-          </div>
-          <button onclick="enviarEstudiante()">ENVIAR</button>
-        </form>
+      <div id="empresa" class="tabcontent">
+        <table id="tablaEmpresa">
+          <tr>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Pagina Web</th>
+            <th>Persona Contacto</th>
+            <th>Telefono Contacto</th>
+            <th>Email Contacto</th>
+            <th>Tutor laboral</th>
+            <th>Telefono Tutor</th>
+            <th>Email Tutor</th>
+          </tr>
+          <tr>
+            <td>GFI Informatica</td>
+            <td>Edificio Inn Offices, Calle Leonardo da Vinci, 20, 41092 Sevilla</td>
+            <td>www.gfi.world</td>
+            <td>Raul Fernandez Perez</td>
+            <td>123125343</td>
+            <td>3333@gmail.com</td>
+            <td>Manolo Alcántara</td>
+            <td>563465443</td>
+            <td>44444@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Fujistu</td>
+            <td>Av. San Francisco Javier, 20, 41018 Sevilla</td>
+            <td>www.fujitsu.com</td>
+            <td>Gabriel Aranda Martinez</td>
+            <td>123456789</td>
+            <td>11111@gmail.com</td>
+            <td>Antonio Fernandez</td>
+            <td>987654321</td>
+            <td>22222@gmail.com</td>
+          </tr>
+          <tr>
+            <td>App Informatica</td>
+            <td>Calle Real 20, 41120 Sevilla</td>
+            <td>www.appinformatica.com</td>
+            <td>Maria Jimenez</td>
+            <td>234654353</td>
+            <td>5555@gmail.com</td>
+            <td>Jose Perez</td>
+            <td>674332455</td>
+            <td>66666@gmail.com</td>
+          </tr>
+        </table>
       </div>
-    </div>
-    <!-- CONTENIDO MODAL EMPRESA -->
-    <!-- CONTENIDO MODAL EMPRESA -->
-    <div id="modalEmpresa" class="modal">
-      <div class="modal-content">
-        <span class="close" id="cerrarModal" onclick="CerrarModalEmpresa()">&times;</span>
-        <h3>Añadir a una empresa</h3>
+      <div id="profesores" class="tabcontent">
+        <h2>PROFESORES</h2>
+        <p>Aqui apareceran los tutores docentes asignados a las prácticas en empresa</p>
+        <table id="tablaProfesor">
+          <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+          </tr>
+          <tr>
+            <td>Guillermo</td>
+            <td>Salas Collado</td>
+          </tr>
+          <tr>
+            <td>Maria</td>
+            <td>Benitez Martinez</td>
+          </tr>
+          <tr>
+            <td>Alberto</td>
+            <td>Garcia Mejias</td>
+          </tr>
+        </table>
       </div>
-    </div>
-    <!-- CONTENIDO MODAL PROFESORES -->
-    <!-- CONTENIDO MODAL PROFESORES -->
-    <div id="modalProfesor" class="modal">
-      <div class="modal-content">
-        <span class="close" id="cerrarModal" onclick="CerrarModalProfesor()">&times;</span>
-        <h3>Añadir a un profesor</h3>
-        <form action="">
-          <div>
-            <label for="nombreProfesor">Nombre: <input type="text" id="nombreProfesor"></label>
-            <label for="apellidosProfesor">Apellidos: <input type="text" id="apellidosProfesor"></label>
-          </div>
-          <button onclick="enviarProfesor()">ENVIAR</button>
-        </form>
+      <div id="asignacion" class="tabcontent">
+        <h2>ASIGNACIONES</h2>
+        <table id="tablaAsignacion">
+          <tr>
+            <th>Nombre</th>
+            <th>Empresa (Tutor)</th>
+            <th>Tutor Docente</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
+          </tr>
+        </table>
       </div>
-    </div>
-    <!-- CONTENIDO MODAL ASIGNACIONES -->
-    <!-- CONTENIDO MODAL ASIGNACIONES -->
-    <div id="modalAsignacion" class="modal">
-      <div class="modal-content">
-        <span class="close" id="cerrarModal" onclick="CerrarModalAsignacion()">&times;</span>
-        <h3>Añadir una asignacion</h3>
-      </div>
-    </div>
-    <!-- CONTENIDO MODAL ACTIVIDADES -->
-    <!-- CONTENIDO MODAL ACTIVIDADES -->
-    <div id="modalActividades" class="modal">
-      <div class="modal-content">
-        <span class="close" id="cerrarModal" onclick="CerrarModalActividades()">&times;</span>
-        <h3>Añadir una actividad</h3>
+      <div id="actividades" class="tabcontent">
         <form action="">
           <table id="tablaActividadesCabecera">
             <tr>
-              <td>Semana del <input  type="text" id="dia1Actividades"> al <input type="text" id="dia2Actividades"> de <input id="mesActividades" type="text"> del año <input type="text" id="añoActividades"></td>
+              <td>Semana del <input  type="text" id="dia1Actividades"> al <input type="text" id="dia2Actividades"> de <input id="mesActividades" type="text"> del año <input type="text" id="añoActividades"><span id="spanActividades" onclick="comprobarFecha()">OK</span></td>
             </tr>
             <tr>
-              <td>CENTRO DOCENTE <input type="text" id="centroDocenteActividades"><br>PROFESOR/A RESPONSABLE <input type="text" id="profesorActividades"></td>
+              <td>CENTRO DOCENTE <input type="text" id="centroDocenteActividades" value="IES RODRIGO CARO"><br>PROFESOR/A RESPONSABLE <input type="text" id="profesorActividades"></td>
               <td>CENTRO DE TRABAJO <input type="text" id="centroTrabajoActividades"><br>TUTOR/A DEL CENTRO DE TRABAJO <input type="text" id="tutorEmpresaActividades"></td>
             </tr>
             <tr>
-              <td>ALUMNO/A <input type="text" id="alumnoActividades"></td>
+              <td>ALUMNO/A <select name="alumno" id="alumnoActividades"></select> <span onclick="seguirActividades()">OK</span></td>
               <td>CICLO FORMATIVO <input type="text" id="cicloFormativoActividades"> GRADO <select name="grado" id="gradoActividades"><option value="
                 gradoSuperiorActividades">S</option><option value="gradoMedioActividades">M</option></select></td>
             </tr>
@@ -216,8 +192,91 @@
               <td><input type="text" id="observacionesViernes"></td>
             </tr>
           </table>
-          <button onclick="enviarActividades()">ENVIAR</button>
+          <button onclick="enviarActividades()">GUARDAR</button>
         </form>
+      </div>
+    </div>
+    <!-- boton desplegable -->
+    <div class="botonAux" id="botonAux">
+      <div class="dropdown">
+        <div class="dropdown-content">
+          <!-- contenido del desplegable -->
+          <a href="#" onclick="AñadirEstudiante()">Estudiante</a>
+          <a href="#" onclick="AñadirEmpresa()">Empresa</a>
+          <a href="#" onclick="AñadirProfesor()">Profesor</a>
+          <a href="#" onclick="AñadirAsignacion()">Asignacion</a>
+        </div>
+        <span class="btn" id="btn">
+          <i class="fa fa-caret-down"></i><b>AÑADIR</b>
+        </span>
+      </div>
+    </div>
+    <!-- CONTENIDO MODAL ESTUDIANTES -->
+    <!-- CONTENIDO MODAL ESTUDIANTES -->
+    <div id="modalEstudiante" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="CerrarModalEstudiante()">&times;</span>
+        <h3>Añadir a un estudiante</h3>
+        <form action="">
+          <div>
+            <label for="nombreEstudiante">Nombre: <input type="text" id="nombreEstudiante"></label>
+            <label for="apellidosEstudiante">Apellidos: <input type="text" id="apellidosEstudiante"></label>
+            <label for="cursoEstudiante">Curso: <input type="text" id="cursoEstudiante" value="2º"></label>
+            <label for="cicloEstudiante">Ciclo: <input type="text" id="cicloEstudiante"></label>
+          </div>
+          <button onclick="enviarEstudiante()">ENVIAR</button>
+        </form>
+      </div>
+    </div>
+    <!-- CONTENIDO MODAL EMPRESA -->
+    <!-- CONTENIDO MODAL EMPRESA -->
+    <div id="modalEmpresa" class="modal">
+      <div class="modal-content">
+        <span class="close" id="cerrarModal" onclick="CerrarModalEmpresa()">&times;</span>
+        <h3>Añadir a una empresa</h3>
+        <form action="">
+          <div id="divEmpresa4">
+            <div id="divEmpresa1">
+              <label for="nombreEmpresa">Nombre: <input type="text" id="nombreEmpresa"></label>
+              <label for="direccionEmpresa">Direccion: <input type="text" id="direccionEmpresa"></label>
+              <label for="pagWeb">Pagina Web: <input type="text" id="pagWeb"></label>
+              <label for="numContacto">Nombre Contacto: <input type="text" id="nomContacto"></label>
+            </div>
+            <div id="divEmpresa2">
+              <label for="telContacto">Telefono Contacto: <input type="text" id="telContacto"></label>
+              <label for="emailContacto">Email Contacto: <input type="text" id="emailContacto"></label>
+              <label for="tutor">Tutor Laboral: <input type="text" id="tutor"></label>
+              <label for="telTutor">Telefono Tutor: <input type="text" id="telTutor"></label>
+              <label for="emailTutor">Email Tutor: <input type="text" id="emailTutor"></label>
+            </div>
+          </div>
+        </form>
+          <div id="divEmpresa3">
+            <button onclick="enviarEmpresa()">ENVIAR</button>
+          </div>
+      </div>
+    </div>
+    <!-- CONTENIDO MODAL PROFESORES -->
+    <!-- CONTENIDO MODAL PROFESORES -->
+    <div id="modalProfesor" class="modal">
+      <div class="modal-content">
+        <span class="close" id="cerrarModal" onclick="CerrarModalProfesor()">&times;</span>
+        <h3>Añadir a un profesor</h3>
+        <form action="">
+          <div>
+            <label for="nombreProfesor">Nombre: <input type="text" id="nombreProfesor"></label>
+            <label for="apellidosProfesor">Apellidos: <input type="text" id="apellidosProfesor"></label>
+          </div>
+          <button onclick="enviarProfesor()">ENVIAR</button>
+        </form>
+      </div>
+    </div>
+    <!-- CONTENIDO MODAL ASIGNACIONES -->
+    <!-- CONTENIDO MODAL ASIGNACIONES -->
+    <div id="modalAsignacion" class="modal">
+      <div class="modal-content">
+        <span class="close" id="cerrarModal" onclick="CerrarModalAsignacion()">&times;</span>
+        <h3>Añadir una asignacion</h3>
       </div>
     </div>
     <div class="footer">
